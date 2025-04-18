@@ -1,0 +1,114 @@
+/* ChatWindow CSS (no container) */
+.chat-window {
+  width: 100%; /* Full width of the screen */
+  padding: 20px;
+  background: #f9f9f9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  max-width: none; /* No maximum width restriction */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0 auto; /* Center horizontally */
+}
+
+/* Header Styles */
+.chat-header {
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.chat-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0;
+}
+
+/* Chat Window Scroll */
+.message-container {
+  max-height: 450px;
+  overflow-y: auto;
+  padding-right: 15px;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f9f9f9;
+}
+
+.message-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.message-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.message-container::-webkit-scrollbar-track {
+  background: #f9f9f9;
+}
+
+/* Message Bubble */
+.message-bubble {
+  position: relative;
+  display: inline-block;
+  padding: 15px;
+  border-radius: 25px;
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 75%;
+  transition: all 0.3s ease-in-out;
+}
+
+.message-bubble.bg-primary {
+  background: linear-gradient(135deg, #6a5acd, #00bcd4);
+  color: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.message-bubble.bg-light {
+  background: #e2e6ea;
+  color: #333;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.message-bubble .message-time {
+  font-size: 11px;
+  color: #777;
+  position: absolute;
+  bottom: -18px;
+  right: 10px;
+}
+
+/* Typing Indicator */
+.typing-indicator {
+  font-size: 14px;
+  color: #888;
+}
+
+.typing-dots {
+  font-size: 18px;
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .chat-window {
+    padding: 15px;
+  }
+
+  .message-bubble {
+    font-size: 13px;
+    max-width: 80%;
+  }
+
+  .chat-title {
+    font-size: 1.1rem;
+  }
+}

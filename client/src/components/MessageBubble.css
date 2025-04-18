@@ -1,0 +1,26 @@
+/* Custom Styles for Message Bubble */
+.message-bubble {
+  position: relative;
+  font-size: 1.1rem;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out; /* Smooth transition for shadow and scaling */
+}
+
+.message-bubble:hover {
+  transform: none; /* Prevent the bubble from expanding or changing size */
+  box-shadow: inherit; /* Keep the box-shadow unchanged on hover */
+}
+
+.message-bubble p {
+  margin: 0;
+}
+
+.message-bubble .timestamp {
+  position: absolute;
+  bottom: -20px;
+  right: 10px;
+  font-size: 0.8rem;
+  color: #6c757d;
+}

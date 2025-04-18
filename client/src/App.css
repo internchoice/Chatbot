@@ -1,0 +1,156 @@
+/* App CSS for Full-Screen Layout */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh; /* Full height of the screen */
+  background: #F5F5F5; 
+  color: white; /* Light text for contrast */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Title */
+.custom-title {
+  font-size: 2rem;
+  text-align: center;
+  color: #00bcd4; /* Light cyan for a techy feel */
+  margin-bottom: 30px;
+}
+
+/* Controls Section (Buttons & Model Selector) */
+.controls {
+  width: 100%;
+  max-width: 800px; /* Limit the width */
+  margin-bottom: 20px;
+}
+
+.controls .form-select,
+.controls .btn {
+  margin: 5px 0;
+}
+
+/* Chat Window Container */
+.chat-window-container {
+  flex: 1;
+  width: 100%;
+  max-width: 800px; /* Max width for responsiveness */
+  margin: 20px auto;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black for a futuristic feel */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow-y: auto; /* Only the chat window scrolls */
+}
+
+/* Chat Window (message container) */
+.chat-window-container {
+  background: #1c1c2f; /* Dark background for the chat window */
+  padding: 15px;
+  border-radius: 10px;
+  max-height: 70vh; /* Limit height for the chat */
+  overflow-y: auto; /* Scroll only for the chat messages */
+}
+
+/* Message Bubbles */
+.message-bubble {
+  display: inline-block;
+  padding: 12px;
+  border-radius: 25px;
+  max-width: 75%;
+  line-height: 1.5;
+  transition: all 0.3s ease;
+}
+
+.message-bubble.bg-primary {
+  background: linear-gradient(135deg, #6a5acd, #00bcd4);
+  color: white;
+  height: 50px;
+}
+
+.message-bubble.bg-light {
+  background: #2e3b47;
+  color: #ddd;
+}
+
+.message-time {
+  font-size: 11px;
+  color: #888;
+  position: absolute;
+  bottom: -15px;
+  right: 10px;
+}
+
+/* Input Section */
+.input-section {
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Buttons */
+.custom-button {
+  margin: 0 5px;
+}
+
+.btn-outline-primary,
+.btn-outline-danger,
+.btn-outline-secondary {
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: #00bcd4;
+  color: #fff;
+}
+
+.btn-outline-danger:hover {
+  background-color: #ff6b6b;
+  color: #fff;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #5e5e5e;
+  color: #fff;
+}
+
+/* Typing Indicator */
+.typing-indicator {
+  font-size: 14px;
+  color: #888;
+}
+
+.typing-dots {
+  font-size: 18px;
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .chat-window-container {
+    max-width: 90%;
+  }
+
+  .custom-title {
+    font-size: 1.5rem;
+  }
+}
+
+.input{
+  width: 450px !important;
+  border-radius: 20px !important;
+}
+.send{
+  border-radius: 20px !important;
+  background: linear-gradient(135deg, #6a5acd, #00bcd4) !important;
+}
